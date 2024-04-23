@@ -1,8 +1,9 @@
-<?php require_once 'inc/header.php'; ?>
+<?php require_once 'inc/header.php'; 
+    $cat=view_cat();
+?>
 <?php
     require_once 'inc/nav.php'; 
-    $cat=view_cat();
-    
+
 ?>
 
         <!-- Content Start -->
@@ -20,7 +21,10 @@
                             <form method="post" class="row mb-3" enctype="multipart/form-data">
                             <div >
                                     <label for="inputname3" class="col-sm-2 col-form-label">Add Product</label>
-                                    <?php save_products(); ?>
+                                    <?php 
+                                    save_products();
+                                    display_message();
+                                    ?>
                                     <div class="form-group row">
                                         <!-- <input type="name" class="form-control" id="inputname3" name="product"> -->
                                     
@@ -67,21 +71,16 @@
                                     </div>
                                     <div class="form-group row ">
                                     <div class="col-sm-10">
-                                        <textarea id="" cols="30" rows="10" class="form-control" placeholder=" Description " name="desc"></textarea>
+                                        <textarea id="" cols="30" rows="10" class="form-control" placeholder="Product Description " name="desc"></textarea>
                                     </div>
                                     </div>
-                                    <button type="submit" class="btn btn-info my-4 mx-4" name="pro_btn">Submit</button>
+                                    <button  class="btn btn-info my-4 mx-4" type="submit" name="pro_btn">Submit</button>
+                                    </form>
                                 </div>
-                            
-
-
-                        
-                        
+                                
                         
                         </div>
-                        <?php   
-                                display_message();
-                        ?>
+                
                     </div>
                 </div>
             </div>
