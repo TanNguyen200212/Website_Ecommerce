@@ -172,4 +172,48 @@ function update_cat()
 
 }
 
+//------------------------products page-------------------------------
+
+function save_products(){
+    global $con;
+    if($_SERVER['REQUEST_METHOD']== 'POST' && isset($_POST['pro_btn'])){
+        $cat_id= safe_value($con,$_POST['cat_id']);
+        $product_name = safe_value($con,$_POST['product_name']);
+        $mrp = safe_value($con,$_POST['mrp']);
+        $price = safe_value($con,$_POST['price']);
+        $qty =safe_value($con,$_POST['qty']);
+        $desc = safe_value($con,$_POST['desc']);
+
+        $img =$_FILES['img']['name'];
+        $type= $_FILES['img']['type'];
+        $tmp_name =$_FILES['img']['tmp_name'];
+        $size =$_FILES['img']['size'];
+        
+        $img_ext =explode('.',$img);
+        $img_correct_ext = strtolower(end($img_ext));
+        $allow = array('jpg','jpeg','png');
+        $path = "img/*.$img";
+
+        if(in_array($img_correct_ext,$allow))
+        {
+            if($size<50000)
+            {
+                $query ="insert into products(category_name,products_name,MRP,price,qty,img,description,status)values('$cat_id','$product_name','$mrp','$price',$qty','$img','$desc','1')";
+                $result =mysqli_query($con,$query);
+
+                if($result){
+                    set_message(display_success("product has been saved in the database "));
+                    move_uploaded_file($tmp_name,$path);
+                }
+                else{
+
+                }
+            }
+        }else{
+            set_message(display_error("you can't store this file :"));
+        }
+    }
+}
+
+
 ?>

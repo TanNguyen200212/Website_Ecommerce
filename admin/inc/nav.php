@@ -24,10 +24,15 @@
                             <a href="manage_category.php" class="dropdown-item">Manage Category</a>
                         </div>
                     </div>
-                    <!-- <li>
-                    <a href="category.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Category</a>
-                    </li> -->
-                    <a href="product.php" class="nav-item nav-link"><i class="fa fa-solid fa-bars"></i> Product</a>
+                    <!-- fa fa-table me-2 -->
+                        <div class="nav-item dropdown">
+                            <a href="product.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-cart-arrow-down"></i>Product</a>
+                            <div class="dropdown-menu bg-transparent border-0"> 
+                                <a href="add_product.php" class="dropdown-item">Add Product</a>
+                                <a href="manage_product.php" class="dropdown-item">Manage Product</a>
+                            </div>
+                        </div>
+                    <!-- <a href="product.php" class="nav-item nav-link"><i class="fa fa-solid fa-bars"></i> Product</a> -->
                     <a href="order_master.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Order Master</a>
                     <a href="user_list.php" class="nav-item nav-link"><i class="fa fa-solid fa-list"></i> User List</a>
                     <a href="contact.php" class="nav-item nav-link"><i class="fa fa-solid fa-address-card"></i> Contact</a>
