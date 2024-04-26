@@ -241,4 +241,41 @@ function save_products(){
 }   
 
 
+//view products
+
+function view_product(){
+    global $con;
+    $query ="SELECT products.p_id, categories.cat_name, products.product_name, products.MRP, products.price, products.qty, products.img, products.description, products.status from products INNER JOIN categories on products.category_name = categories.id";
+    return $result = mysqli_query($con,$query);
+}
+
+//product status active or deactive
+
+function active_status_product()
+{
+    global $con;
+    if(isset($_GET['opr']) && $_GET['opr']!="")
+    {
+        $operation = safe_value($con,$_GET['opr']);
+        $id = safe_value($con,$_GET['id']);
+
+        if($operation=='active')
+        {
+            $status = 1;
+        }else{
+            $status = 0;
+        }
+
+        $query = "UPDATE products SET status='$status' WHERE p_id='$id'";
+        $result = mysqli_query($con,$query);
+
+        if($result){
+            header("location:manage_product.php");
+            set_message(display_success("product has been updated"));
+        }
+
+    }
+
+}
+
 ?>
