@@ -220,25 +220,73 @@ function save_products(){
         // }
 
 
-        if (in_array($img_correct_ext, $allow) && $size < 100000) {
-            // Nếu hình ảnh hợp lệ, thực hiện thêm sản phẩm vào cơ sở dữ liệu
-            $query = "INSERT INTO products(category_name, product_name, MRP, price, qty, img, description, status) VALUES ('$cat_id', '$product_name', '$mrp', '$price', '$qty', '$img', '$desc', '1')";
-            $result = mysqli_query($con, $query);
+        // if (in_array($img_correct_ext, $allow) && $size < 100000) {
+        //     // Nếu hình ảnh hợp lệ, thực hiện thêm sản phẩm vào cơ sở dữ liệu
+        //     $query = "INSERT INTO products(category_name, product_name, MRP, price, qty, img, description, status) VALUES ('$cat_id', '$product_name', '$mrp', '$price', '$qty', '$img', '$desc', '1')";
+        //     $result = mysqli_query($con, $query);
     
-            if ($result) {
+        //     if ($result) {
             
-                move_uploaded_file($tmp_name, $path);
-                set_message(display_success("Product has been saved in the database"));
-                header("location: manage_category.php"); 
-                exit(); 
-            } else {
-                set_message(display_error("Failed to add product to the database"));
+        //         move_uploaded_file($tmp_name, $path);
+        //         set_message(display_success("Product has been saved in the database"));
+        //         header("location: manage_category.php"); 
+        //         exit(); 
+        //     } else {
+        //         set_message(display_error("Failed to add product to the database"));
+        //     }
+        // } else {
+        //     set_message(display_error("You can't store this file :("));
+        // }
+
+    if(empty($product_name)|| empty($mrp) ||empty($price)|| empty($desc) || empty($img)){
+            set_message(display_error("please fill in the blanks "));
+    }else{
+        if(in_array($img_correct_ext,$allow))
+        {
+            if($size<1000000)
+            {
+                if($cat_id == 0)
+                {
+                    set_message(display_error(" please select a category"));
+                }
+                else
+                {
+                    $query = " SELECT * FROM products WHERE product_name='$product_name'";
+                    $result = mysqli_query($con, $query);
+
+                    if(mysqli_fetch_assoc($result))
+                    {
+                        set_message(display_error(" Product Name already Given"));
+                    }
+                    else
+                    {
+                        $query = "INSERT INTO products(category_name, product_name, MRP, price, qty, img, description, status) VALUES ('$cat_id', '$product_name', '$mrp', '$price', '$qty', '$img', '$desc', '1')";
+                        $result = mysqli_query($con, $query);
+
+                if($result){
+                    set_message(display_success(" product added"));
+                    move_uploaded_file($tmp_name,$path);
+                    }
+                }
+
+                }
+            } else
+            {
+                set_message(display_error(" image size too large"));
             }
-        } else {
-            set_message(display_error("You can't store this file :("));
+    
         }
+        else
+        {
+            set_message(display_error(" you cant store those format"));
+        }
+    
+
+        }
+
     }
-}   
+    }
+
 
 
 //view products
@@ -277,5 +325,100 @@ function active_status_product()
     }
 
 }
+
+
+//edit product 
+function edit_record(){
+    global $con;
+    if(isset($_GET['id'])){
+        $edit_id =safe_value($con,$_GET['id']);
+        $sql="select * from products where p_id='$edit_id'";
+        $res= mysqli_query($con,$sql);
+        return $res;
+    }
+}
+
+
+//update record
+function update_record(){
+    global $con;
+    if($_SERVER['REQUEST_METHOD'] =='POST'&& isset($_POST['pro_btn_edit'])){
+        $cat_id= safe_value($con,$_POST['cat_id']);
+        $product_id =safe_value($con,$_POST['product_id']);
+        $product_name = safe_value($con,$_POST['product_name']);
+        $mrp = safe_value($con,$_POST['mrp']);
+        $price = safe_value($con,$_POST['price']);
+        $qty =safe_value($con,$_POST['qty']);
+        $desc = safe_value($con,$_POST['desc']);
+        
+
+        $img =$_FILES['img']['name'];
+        $type= $_FILES['img']['type'];
+        $tmp_name= $_FILES['img']['tmp_name'];
+        $size =$_FILES['img']['size'];
+        
+        $img_ext =explode('.',$img);
+        $img_correct_ext = strtolower(end($img_ext));
+        $allow = array('jpg','jpeg','png');
+        $path = "img/".$img;
+
+
+        if(empty($product_name)|| empty($mrp) ||empty($price)||  empty($qty) ||empty($desc)){
+            set_message(display_error("please fill in the blanks "));
+        }else{
+
+            if(empty($img)){
+                if($cat_id == 0)
+                {
+                    set_message(display_error(" please select a category"));
+                }
+            else{
+                        $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id' ";
+                        $result = mysqli_query($con, $query);
+                if($result){
+                    set_message(display_success(" product added"));
+                    move_uploaded_file($tmp_name,$path);
+                    }
+                }
+            }else{
+            
+                    if($size<1000000)
+                    {
+                        if(in_array($img_correct_ext,$allow))
+                        {
+                                $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id' ";
+                                $result = mysqli_query($con, $query);
+                        if($result){
+                            set_message(display_success(" product added"));
+                            move_uploaded_file($tmp_name,$path);
+                            }
+                        }
+                else
+                    {
+                        set_message(display_error(" you cant store those format"));
+                    }
+                
+                    }
+        else
+        {
+            set_message(display_error(" image size too large"));
+        
+        }
+        }
+        }
+    }
+}
+
+//////////contact us page
+
+function contact()
+{
+    global $con;
+    $sql = "SELECT * FROM contact ";
+    return $query = mysqli_query($con, $sql);
+}
+
+
+
 
 ?>

@@ -1,7 +1,8 @@
 <?php require_once 'inc/header.php';
     // active_status();
-    $value =view_product();
     active_status_product();
+    $value =view_product();
+
 
 ?>
 <?php require_once 'inc/nav.php'; ?>
