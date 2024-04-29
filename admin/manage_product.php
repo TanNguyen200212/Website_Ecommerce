@@ -1,6 +1,6 @@
 <?php require_once 'inc/header.php';
     // active_status();
-    active_status_product();
+    active_status_product(); 
     $value =view_product();
 
 

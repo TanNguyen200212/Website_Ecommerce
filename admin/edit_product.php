@@ -36,6 +36,7 @@
                                     ?>
                         
                             <form method="post" class="row mb-3" enctype="multipart/form-data">
+                            <!-- enctype="multipart/form-data" -->
                             <div >
                                     <label for="inputname3" class="col-sm-2 col-form-label">Edit Product</label>
                                 
@@ -49,7 +50,7 @@
                                             <?php
                                             while($row=mysqli_fetch_assoc($cat))
                                             {
-                                                if($row =mysqli_fetch_assoc($cat)){
+                                                // if($row =mysqli_fetch_assoc($cat)){
                                                     if($category_id == $row['id']){
 
                                             
@@ -64,7 +65,7 @@
                                                 }
                                                 
                                             }
-                                            }
+                                            // }
                                             ?>
                                         </select>
                                     </div>
@@ -94,6 +95,7 @@
                                     <div class="form-group row ">
                                     <div class="col-sm-10">
                                         <input type="file" class="form-control" name="img" value="<?php echo $img ?>">
+                                        <img src="img/<?php echo $img ?>" alt="" width="50px" height="50px" class="rounded-lg">
                                     </div>
                                     </div>
                                     <div class="form-group row ">

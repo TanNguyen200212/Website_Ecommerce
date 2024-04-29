@@ -363,49 +363,104 @@ function update_record(){
         $path = "img/".$img;
 
 
-        if(empty($product_name)|| empty($mrp) ||empty($price)||  empty($qty) ||empty($desc)){
-            set_message(display_error("please fill in the blanks "));
-        }else{
+        // if(empty($product_name)|| empty($mrp) ||empty($price)||  empty($qty) ||empty($desc)){
+        //     set_message(display_error("please fill in the blanks "));
+        // }else
+        // {
+        //     if(empty($img)){
+        //         if($cat_id == 0)
+        //         {
+        //             set_message(display_error(" please select a category"));
+        //         }
+        //     else{
+        //                 $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc'where  p_id='$product_id' ";
+        //                 $result = mysqli_query($con, $query);
+        //         if($result){
+        //             set_message(display_success(" product added"));
+        //             move_uploaded_file($tmp_name,$path);
+        //             }
+        //         }
+        //     }
+        // else
+        // {
+        //     if($size<500000)
+        //         {
+        //         if(in_array($img_correct_ext,$allow)){
+        //             $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id' ";
+        //             $result = mysqli_query($con, $query);
+        //                 if($result){
+        //                         set_message(display_success(" product added"));
+        //                         move_uploaded_file($tmp_name,$path);
+        //                                 }
+        //     } else{
+        //         set_message(display_error(" you can't store this file"));
+        //     }
+        // }
+        // else
+        //     {
+        //         set_message(display_error(" image size too large"));
+        //     }
+        // }
+        // }
 
-            if(empty($img)){
-                if($cat_id == 0)
-                {
-                    set_message(display_error(" please select a category"));
-                }
-            else{
-                        $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id' ";
-                        $result = mysqli_query($con, $query);
-                if($result){
-                    set_message(display_success(" product added"));
-                    move_uploaded_file($tmp_name,$path);
-                    }
-                }
-            }else{
-            
-                    if($size<1000000)
-                    {
-                        if(in_array($img_correct_ext,$allow))
-                        {
-                                $query = "update products set category_name='$cat_id',product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id' ";
-                                $result = mysqli_query($con, $query);
-                        if($result){
-                            set_message(display_success(" product added"));
-                            move_uploaded_file($tmp_name,$path);
-                            }
-                        }
-                else
-                    {
-                        set_message(display_error(" you cant store those format"));
-                    }
-                
-                    }
-        else
-        {
-            set_message(display_error(" image size too large"));
+        if(empty($product_name) || empty($mrp) || empty($price) || empty($qty) || empty($desc) )
+    {
+        set_message(display_error(" Fill up the remaning form"));
+    }
+    else
+    {
         
+        if(empty($img))
+        {
+            if($cat_id == 0)
+                {
+                    set_message(display_error(" select a category"));
+                }
+                else
+                {
+                $query = "UPDATE products SET category_name='$cat_id', product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id'  ";
+                $result = mysqli_query($con,$query);
+
+                if($result)
+                {
+                    set_message(display_success("product details has been updated"));
+                    move_uploaded_file($tmp_name,$path);
+                }
+
+                }
+
+        
+    
+        }
+        else {
+
+            if($size<1000000)
+            {
+                if(in_array($img_correct_ext,$allow))
+            {
+                $query = "UPDATE products SET category_name='$cat_id', product_name='$product_name',MRP='$mrp',price='$price',qty='$qty',img='$img',description='$desc' where  p_id='$product_id'  ";
+                $result = mysqli_query($con,$query);
+
+                if($result)
+                {
+                    set_message(display_success("product details has been updated"));
+                    move_uploaded_file($tmp_name,$path);
+                }
+            }
+            else
+            {
+                set_message(display_error(" you cant store those format"));
+            }
+            } 
+            else
+            {
+                set_message(display_error(" image size too large"));
+            }
+
+            
         }
         }
-        }
+
     }
 }
 

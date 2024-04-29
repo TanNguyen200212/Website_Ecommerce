@@ -21,11 +21,10 @@
                                     <thead>
                                         <tr>
                                             <th>Contact ID</th>
-                                            <th>First Name Name</th>
+                                            <th>First Name</th>
                                             <th>Last Name</th>
-                                            <th>email</th>                                         
-                                            <th>Message</th>
-                                            <th>Functions</th>
+                                            <th>Email</th>                                         
+                                            <th>Details</th>
                                         
                                         </tr>
                                     </thead>
@@ -37,9 +36,9 @@
                                                 while($row = mysqli_fetch_assoc($value))
                                                 {
                                                     ?>
-                                                    <td> <?php echo $row['id']; ?> </td>
-                                                    <td> <?php echo $row['firstname']; ?> </td>
-                                                    <td> <?php echo $row['lastname']; ?> </td>
+                                                    <td> <?php echo $row['contact_id']; ?> </td>
+                                                    <td> <?php echo $row['first_name']; ?> </td>
+                                                    <td> <?php echo $row['last_name']; ?> </td>
                                                     <td> <?php echo $row['email']; ?> </td>
                                                     <td> <?php echo $row['text']; ?> </td>
                                                     
@@ -47,7 +46,7 @@
                                                     <td class = "text-center">
 
                                                         
-                                                        <a href="del_con.php?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm"> Delete</a>
+                                                        <a href="del_con.php?id=<?php echo $row['contact_id'] ?>" class="btn btn-danger btn-sm"> Delete</a>
                                                         
                                                     </td>                          
                                         </tr>
