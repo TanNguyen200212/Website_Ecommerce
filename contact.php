@@ -1,17 +1,16 @@
 <?php require_once 'inc/header.php' ?>
 <?php require_once 'inc/nav.php' ?>
 
-
 	<!-- Page info -->
-	<div class="page-top-info">
+	<!-- <div class="page-top-info">
 		<div class="container">
-			<h4>Contact</h4>
+			<h4>Category PAge</h4>
 			<div class="site-pagination">
 				<a href="">Home</a> /
-				<a href="">Contact</a>
+				<a href="">Shop</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Page info end -->
 
 
@@ -121,18 +120,3 @@
 
 
 	<?php require_once 'inc/footer.php' ?>
-
-
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.slicknav.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.nicescroll.min.js"></script>
-	<script src="assets/js/jquery.zoom.min.js"></script>
-	<script src="assets/js/jquery-ui.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	</body>
-</html>

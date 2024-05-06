@@ -411,7 +411,8 @@ function update_record()
                 if ($cat_id == 0) {
                     set_message(display_error("select a category"));
                 } else {
-                    $query = "update products set category_name='$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', description='$desc' where p_id='$product_id'";
+                    // $query = "update products set category_name='$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', description='$desc' where p_id='$product_id'";
+                    $query = "update products set category_name='$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', img='$img', description='$desc' where p_id='$product_id'";
                     $result = mysqli_query($con, $query);
 
                     if ($result) {
@@ -423,7 +424,8 @@ function update_record()
 
                 if ($size < 500000) {
                     if (in_array($img_correct_ext, $allow)) {
-                        $query = "update products set category_name '$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', img='$img', description='$desc' where p_id='$product_id'";
+                        $query = "update products set category_name='$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', img='$img', description='$desc' where p_id='$product_id'";
+                        // $query = "update products set category_name ='$cat_id', product_name='$product_name', MRP='$mrp', price='$price', qty='$qty', img='$img', description='$desc' where p_id='$product_id'";
                         $result = mysqli_query($con, $query);
 
                         if ($result) {
@@ -434,7 +436,7 @@ function update_record()
                         set_message(display_error("you cant store those format"));
                     }
                 } else {
-                    set_message(display_error("Tamanho da Imagem Superior ao Permitido"));
+                    set_message(display_error("image size too large"));
                 }
             }
         }
@@ -451,8 +453,6 @@ function contact()
     $sql = "SELECT * FROM contact ";
     return $query = mysqli_query($con, $sql);
 }
-
-
 
 
 ?>

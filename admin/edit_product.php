@@ -66,8 +66,8 @@ while($row=mysqli_fetch_assoc($edit_product))
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="hidden" name="product_id" placeholder="Nome do Produto" value="<?php echo $product_id ?>">
-                            <input class="form-control" type="text" name="product_name" placeholder="Nome do Produto" value="<?php echo $product_name ?>">
+                            <input class="form-control" type="hidden" name="product_id" placeholder="Product_id" value="<?php echo $product_id ?>">
+                            <input class="form-control" type="text" name="product_name" placeholder="Product_name" value="<?php echo $product_name ?>">
                         </div>
                     </div>
 
@@ -79,13 +79,13 @@ while($row=mysqli_fetch_assoc($edit_product))
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="price" placeholder="Preço" value="<?php echo $price ?>">
+                            <input class="form-control" type="text" name="price" placeholder="Price" value="<?php echo $price ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="qty" placeholder="Quantidade" value="<?php echo $qty ?>">
+                            <input class="form-control" type="text" name="qty" placeholder="Quantity" value="<?php echo $qty ?>">
                         </div>
                     </div>
 
@@ -98,7 +98,7 @@ while($row=mysqli_fetch_assoc($edit_product))
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <textarea id="" name="desc" cols="30" rows="10" class="form-control" placeholder="Descrição do Produto" required><?php echo $description ?></textarea>
+                            <textarea id="" name="desc" cols="30" rows="10" class="form-control" placeholder="D" required><?php echo $description ?></textarea>
                         </div>
                     </div>
             </div>

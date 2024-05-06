@@ -1,10 +1,14 @@
 <?php require_once 'inc/header.php' ?>
 	<!-- navigation -->
 <?php require_once 'inc/nav.php' ?>
+<?php 
+		$products = get_products('');
+?>
+
 <!-- hero-section -->
 <?php require_once 'inc/banner.php' ?>
 
-<?php 
+<a?php 
     // $products = get_products();
 ?>
 
@@ -51,20 +55,27 @@
 				<h2>LATEST PRODUCTS</h2>
 			</div>
 			<div class="product-slider owl-carousel">
+				<?php 
+				while($row= mysqli_fetch_assoc($products))
+				{
+				?>
 				<div class="product-item">
 					<div class="pi-pic">
-						<img src="./img/product/1.jpg" alt="">
+						<a href ="product.php?p_id=<?php $row['p_id']?>"><img src="admin/img/<?php echo $row['img']?>" alt=""></a>
 						<div class="pi-links">
 							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 						</div>
 					</div>
 					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
+						<h6><?php echo $row['price'] ?></h6>
+						<a href ="product.php?p_id=<?php $row['p_id']?>"><?php echo $row['product_name'] ?></a>
 					</div>
 				</div>
-				<div class="product-item">
+				<?php
+				}
+				?>
+				<!-- <div class="product-item">
 					<div class="pi-pic">
 						<div class="tag-new">New</div>
 						<img src="./img/product/2.jpg" alt="">
@@ -116,7 +127,7 @@
 							<h6>$35,00</h6>
 							<p>Flamboyant Pink Top </p>
 						</div>
-					</div>
+					</div> -->
 			</div>
 		</div>
 	</section>
