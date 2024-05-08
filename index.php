@@ -8,9 +8,6 @@
 <!-- hero-section -->
 <?php require_once 'inc/banner.php' ?>
 
-<a?php 
-    // $products = get_products();
-?>
 
 
 

@@ -8,8 +8,8 @@
 		<div class="container">
 			<h4>Your cart</h4>
 			<div class="site-pagination">
-				<a href="">Home</a> /
-				<a href="">Your cart</a>
+				<a href="index.php">Home</a> /
+				<a href="cart.php">Your cart</a>
 			</div>
 		</div>
 	</div>
@@ -116,13 +116,13 @@
 				<h2>Continue Shopping</h2>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6">
+				<!-- <div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
 							<div class="tag-new">New</div>
 							<img src="./img/product/2.jpg" alt="">
 							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="add-card"><i class="flaticon-bag" id="submit"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
@@ -176,7 +176,7 @@
 							<p>Flamboyant Pink Top </p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -186,17 +186,3 @@
 
 	<?php require_once 'inc/footer.php' ?>
 
-
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.slicknav.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets//jquery.nicescroll.min.js"></script>
-	<script src="assets/js/jquery.zoom.min.js"></script>
-	<script src="assets/js/jquery-ui.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	</body>
-</html>

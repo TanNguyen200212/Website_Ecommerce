@@ -1,8 +1,21 @@
 <?php require_once 'inc/header.php' ?>
-<?php require_once 'inc/nav.php' ?>
+<?php require_once 'inc/nav.php' ;?>
+
+<?php
+
+$product_id = "";
+if (isset($_GET['p_id'])) {
+	$product_id = $_GET['p_id'];
+}
+
+$products = get_products(''); //(), $product_id
+$result = mysqli_fetch_assoc($products);
+// var_dump($result);
+?>
+
 
 	<!-- Page info -->
-	<div class="page-top-info">
+	<!-- <div class="page-top-info">
 		<div class="container">
 			<h4>Category PAge</h4>
 			<div class="site-pagination">
@@ -10,7 +23,7 @@
 				<a href="">Shop</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Page info end -->
 
 
@@ -18,20 +31,12 @@
 	<section class="product-section">
 		<div class="container">
 			<div class="back-link">
-				<a href="./category.php"> &lt;&lt; Back to Category</a>
+				<a href="category.php"> &lt;&lt; Back to Category</a>
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
-						<img class="product-big-img" src="img/single-product/1.jpg" alt="">
-					</div>
-					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
-						<div class="product-thumbs-track">
-							<div class="pt active" data-imgbigurl="img/single-product/1.jpg"><img src="img/single-product/thumb-1.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/2.jpg"><img src="img/single-product/thumb-2.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/3.jpg"><img src="img/single-product/thumb-3.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/4.jpg"><img src="img/single-product/thumb-4.jpg" alt=""></div>
-						</div>
+						<img class="product-big-img" src="admin/img/<?php echo $result ['img'] ?>" alt="">
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
@@ -45,10 +50,13 @@
 						<i class="fa fa-star-o"></i>
 						<i class="fa fa-star-o fa-fade"></i>
 					</div>
+					<div>
+						<h4><span>Price : </span>$<?php echo $result['price']?></h4>
+					</div>
 					<div class="p-review">
 						<a href="">3 reviews</a>|<a href="">Add your review</a>
 					</div>
-					<div class="fw-size-choose">
+					<!-- <div class="fw-size-choose">
 						<p>Size</p>
 						<div class="sc-item">
 							<input type="radio" name="sc" id="xs-size">
@@ -74,12 +82,21 @@
 							<input type="radio" name="sc" id="xxl-size">
 							<label for="xxl-size">42</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="quantity">
 						<p>Quantity</p>
-                        <div class="pro-qty"><input type="text" value="1"></div>
-                    </div>
-					<a href="#" class="site-btn">SHOP NOW</a>
+                        <div class="pro-qty">
+							<form method="post ">
+						<input type="text" value="1" id="qty" value="<?php echo $result['qty']?>">
+						</div>
+					</div>
+							<button type="button" id="p_id" value ="<?php echo $result['p_id']?>" class="site-btn"> Add to Cart</button>
+					</form>
+
+
+
+
+					<!-- <a href="#" class="site-btn">SHOP NOW</a> -->
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
 							<div class="panel-header" id="headingOne">
@@ -87,10 +104,7 @@
 							</div>
 							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="panel-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
-									<p>Approx length 66cm/26" (Based on a UK size 8 sample)</p>
-									<p>Mixed fibres</p>
-									<p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p>
+								<p><?php echo $result['description']?></p>
 								</div>
 							</div>
 						</div>
@@ -101,7 +115,6 @@
 							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 								<div class="panel-body">
 									<img src="./img/cards.png" alt="">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
 								</div>
 							</div>
 						</div>

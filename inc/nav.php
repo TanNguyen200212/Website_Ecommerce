@@ -1,6 +1,8 @@
 <?php 
+	session_start();
 	require_once 'functions/functions.php';
 	$cat =display_cat();
+	$cart_value = total_cart_value();
 
 ?>
 
@@ -30,13 +32,29 @@
 					<div class="col-xl-4 col-lg-5">
 						<div class="user-panel">
 							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="login.php">Sign In </a> or <a href="register.php">Create Account</a>
-							</div>
+							<i class="flaticon-profile"></i>
+								<?php
+									if(isset($_SESSION['EMAIL']))
+									{
+									?>
+										<a href="logout.php">Logout</a>;
+								<?php
+									}
+									else
+										{
+											?>
+										<a href="login.php">Sign In </a> or <a href="register.php">Create Account</a>
+								<?php
+										}
+
+									?>
+								
+								
+							</div> 
 							<div class="up-item">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
-									<span>0</span>
+									<span id="cart_counter"><?php echo $cart_value ?></span>
 								</div>
 								<a href="cart.php">Shopping Cart</a>
 							</div>
