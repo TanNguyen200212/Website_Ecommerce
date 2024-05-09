@@ -41,7 +41,7 @@
 								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
 								<div class="lp-content">
 									<h6>what shoes to wear</h6>
-									<span>Oct 21, 2018</span>
+									<span>Oct 14, 2021</span>
 									<a href="#" class="readmore">Read More</a>
 								</div>
 							</div>
@@ -49,7 +49,7 @@
 								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
 								<div class="lp-content">
 									<h6>trends this year</h6>
-									<span>Oct 21, 2018</span>
+									<span>Oct 14, 2023</span>
 									<a href="#" class="readmore">Read More</a>
 								</div>
 							</div>
@@ -60,20 +60,20 @@
 					<div class="footer-widget contact-widget">
 						<h2>Questions</h2>
 						<div class="con-info">
-							<span>C.</span>
-							<p>Your Company Ltd </p>
+							<span>Y.</span>
+							<p>YAMI STORE </p>
 						</div>
 						<div class="con-info">
-							<span>B.</span>
-							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
+							<span>A.</span>
+							<p>79 Nguyễn Trãi, Phường 4, Quận 5, Hồ Chí Minh, Việt Nam</p>
 						</div>
 						<div class="con-info">
-							<span>T.</span>
-							<p>+53 345 7953 32453</p>
+							<span>M.</span>
+							<p>1900 8181 - 0843263522</p>
 						</div>
 						<div class="con-info">
-							<span>E.</span>
-							<p>office@youremail.com</p>
+							<span>I.</span>
+							<p>yami@gmail.com</p>
 						</div>
 					</div>
 				</div>
@@ -92,7 +92,7 @@
 				</div>
 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
-<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Thiết kế và phát triển bởi YAMI SHOP <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="" target="_blank"></a></p>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 			</div>

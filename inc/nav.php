@@ -67,7 +67,7 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-				<li><a href="index.php">Home</a></li>
+				<li><a href="index.php">HOME</a></li>
 				<?php 
 				while($row = mysqli_fetch_assoc($cat))
 				{
@@ -76,7 +76,7 @@
 					<?php 
 					}
 					?> 
-				<li><a href="./contact.php">Contact </a></li>
+				<li><a href="./contact.php">CONTACT </a></li>
 
 				</ul>
 			

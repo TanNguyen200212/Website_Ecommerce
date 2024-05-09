@@ -102,11 +102,11 @@ function add_cart(){
     var qty = $('#qty').val();
     var pid =$('#p_id').val();
 
-    $.ajax(
+    $.ajax(     
         {
             url:'ajax/manage_cart.php',
             method:'post',
-            data:{Qty:qty,P_ID:pid ,type:'add'},
+            data:{Qty:qty,p_id:pid ,type:'add'},
             success:function(data){
             {
                 $('#cart_counter').html(data);

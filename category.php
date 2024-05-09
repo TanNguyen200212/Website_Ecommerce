@@ -14,17 +14,15 @@
 ?>
 
 	<!-- page info -->
-<!-- <div class="page-top-info">
+<div class="page-top-info">
 		<div class="container">
-			<h4>Category Page</h4>
+			<!-- <h4>Category Page</h4> -->
 			<div class="site-pagination">
-				<a href="category.php">Home</a> 
-				
-				<a href=""><?php echo $result['cat_name']?></a>
-
+				<a href="category.php">Home /</a> 
+				<a href="category.php"><?php echo $result['category_name'] ?></a>
 			</div>
 		</div>
-	</div> -->
+	</div>
 <!-- Category section -->
 <section class="category-section spad">
 	<div class="container">
@@ -41,15 +39,15 @@
 						<div class="col-lg-4 col-sm-6">
 							<div class="product-item">
 								<div class="pi-pic">
-								<a href ="product.php?p_id=<?php $row['p_id']?>"><img src="admin/img/<?php echo $row['img'] ?>" alt=""></a>
+								<a href ="product.php?p_id=<?php $row['p_id'];?>"><img src="admin/img/<?php echo $row['img'] ?>" alt=""></a>
 									<div class="pi-links">
 										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 										<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 									</div>
 								</div>
 								<div class="pi-text">
-									<h6><?php echo $row['price'] ?></h6>
-									<p><?php echo $row['description'] ?></p>
+									<h6>$<?php echo $row['price'] ?></h6>
+									
 								</div>
 							</div>
 						</div>
