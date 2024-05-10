@@ -24,11 +24,11 @@ function get_products($cat_id='', $product_id='')  //,$vmin=0,$vmax=999
 
     if($cat_id!='')
     {
-        $query = "select * from products where category_name='$cat_id ')";//and (price >= $vmin and price <= $vmax 
+        $query = "select * from products where category_name='$cat_id'";//and (price >= $vmin and price <= $vmax 
     }
     if($product_id!='')
     {
-        $query = "select * from products where p_id='$product_id' )"; //and (price >= $vmin and price <= $vmax
+        $query = "select * from products where p_id='$product_id'"; //and (price >= $vmin and price <= $vmax
     }
     // return [];
     return $result = mysqli_query($con,$query);
