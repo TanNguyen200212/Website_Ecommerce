@@ -72,7 +72,7 @@
 				while($row = mysqli_fetch_assoc($cat))
 				{
 					?>
-                <li><a href="category.php"><?php echo  $row ['cat_name']?></a></li>
+                <li><a href="category.php?id=<?php echo $row['id'] ?>"><?php echo  $row ['cat_name']?></a></li>
                 <?php 
 					}
 					?>

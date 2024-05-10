@@ -40,7 +40,6 @@
                         <div class="product-item">
                             <div class="pi-pic">
                                 <a href="product.php?p_id=<?php echo $row['p_id'] ?>">
-                                    <img src=" admin/img/<?php echo $row['img'] ?>" alt=""></a>
                                 <img src="admin/img/<?php echo $row['img'] ?>" alt=""></a>
                                 <div class="pi-links">
                                     <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO

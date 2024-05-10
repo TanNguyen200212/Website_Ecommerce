@@ -32,7 +32,7 @@
                 <a href="product.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="fa fa-cart-arrow-down"></i>Product</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="add_product.php" class="aropdown-item">Add Product</a>
+                    <a href="add_product.php" class="dropdown-item">Add Product</a>
                     <a href="manage_product.php" class="dropdown-item">Manage Product</a>
                 </div>
             </div>

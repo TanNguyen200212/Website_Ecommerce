@@ -27,9 +27,9 @@ $result = mysqli_fetch_assoc($products);
 		<div class="container">
 			<!-- <h4>Category PAge</h4> -->
 				<ul class="breadcrumbs-custom-path">
-			<li><a href="index.php">Home</a></li>
-			<li><a href="category.php">Product</a></li>
-			<li class="active"><?php echo $result['product_name'] ?></li>
+			<a href="index.php">Home</a>
+			<a href="category.php"><?php echo $result['category_name'] ?></a>
+			<a class="active"><?php echo $result['product_name'] ?></a>
 		</ul>
 		</div>
 	</div>
@@ -52,7 +52,9 @@ $result = mysqli_fetch_assoc($products);
 				<div class="col-lg-6 product-details">
 					<h2 class="p-title"><?php echo $result['product_name']?></h2>
 					<!-- <h3 class="p-price">$39.90</h3> -->
+					<h4><span>MRP : </span><del style="color: #ff0000;">$<?php echo $result['MRP']?></del></h4>
 					<h4><span>Price : </span>$<?php echo $result['price']?></h4>
+
 					<h4 class="p-stock">Available: <span>In Stock</span></h4>
 					<div class="p-rating">
 						<i class="fa fa-star-o"></i>
