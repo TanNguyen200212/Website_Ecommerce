@@ -20,7 +20,7 @@
                 <div class="col-lg-2 text-center text-lg-left">
                     <!-- logo -->
                     <a href="index.php" class="site-logo">
-                        <img src="./img/logo.png" alt="">
+                        <img src="./img/logo6.png" alt="">
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-5">

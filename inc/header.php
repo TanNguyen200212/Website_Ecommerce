@@ -13,7 +13,8 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css"/>

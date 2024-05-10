@@ -57,14 +57,26 @@
                     <?php		
 				}
 }
-?>
-                    <div class="text-center w-100 pt-3">
-                        <button class="site-btn sb-line sb-dark">LOAD MORE</button>
-                    </div>
+
+
+?>          
                 </div>
             </div>
         </div>
     </div>
+
+    
+
+    <!-- phantrang -->
+	<!-- <div class="container mt-3">          
+	<ul class="pagination justify-content-center">
+		<li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>
+	</ul>
+	</div> -->
+
 </section>
 <!-- Category section end -->
 

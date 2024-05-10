@@ -1,9 +1,10 @@
 
+
 	<!-- Footer section -->
 	<section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
-				<a href="index.php"><img src="./img/logo-light.png" alt=""></a>
+				<a href="index.php"><img src="./img/logo6-light.png" alt=""></a>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
@@ -38,15 +39,15 @@
 						<h2>Questions</h2>
 						<div class="fw-latest-post-widget">
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/11.jpg"></div>
 								<div class="lp-content">
 									<h6>what shoes to wear</h6>
-									<span>Oct 14, 2021</span>
+									<span>Oct 14, 2022</span>
 									<a href="#" class="readmore">Read More</a>
 								</div>
 							</div>
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/12.jpg"></div>
 								<div class="lp-content">
 									<h6>trends this year</h6>
 									<span>Oct 14, 2023</span>

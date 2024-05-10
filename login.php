@@ -25,24 +25,26 @@
                         </a>
                         <h3>Sign In</h3>
                     </div>
+                    
+
+                    <form  method="POST">
                     <div class="form-floating mb-3" method="POST">
+                    
+                        <input type="email" class="form-control" id="floatingInput"   placeholder="user@gmail.com" name="email" >
                         <label for="floatingText">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="user@gmail.com">
 
                     </div>
-                    <div class="form-floating mb-4">
-                        <label for="floatingPassword">Password</label>
-                        <input type="password" class="form-control" name="password" id="password"
-                            placeholder="Password">
-
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                            <label for="floatingPassword">Password</label>
                         </div>
-                        <a href="">Forgot Password</a>
-                    </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div>
                     <button type="submit" class="btn btn-primary py-3 w-100 mb-4" id="btn_login">Sign In</button>
                     <p class="text-center mb-0">Already have andivcount? <a href="register.php">Sign Up</a></p>
                 </div>

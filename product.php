@@ -118,6 +118,7 @@ $result = mysqli_fetch_assoc($products);
 				</div>
 			</div>
 		</div>
+	
 	</section>
 	<!-- product section end -->
 

@@ -17,29 +17,34 @@
                         <div id="error"></div>
                         <div id="success"></div>
                         <div class="form-floating mb-3" method="POST">
-						<label for="floatingText">Username</label>
+						
                             <input type="text" class="form-control" id="name" placeholder="user">
+                            <label for="floatingText">Username</label>
                             
                         </div>
                         <div class="form-floating mb-3">
-						<label for="floatingInput">Email address</label>
+						
                             <input type="email" class="form-control" id="email" placeholder="name@gmail.com">
+                            <label for="floatingInput">Email address</label>
                             
                         </div>
                         <div class="form-floating mb-4">
-						<label for="floatingPassword">Password</label>
+						
                             <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
                             
                         </div>
 						<div class="form-floating mb-5">
-						<label for="floatingPassword">Confirm Password</label>
+						
                             <input type="password" class="form-control" id="cpassword" placeholder="Password">
+                            <label for="floatingPassword">Confirm Password</label>
                             
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            
                             </div>
                             <a href="">Forgot Password</a>
                         </div>

@@ -150,109 +150,80 @@
             <li><a href="#">LEGGINGS</a></li>
         </ul>
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/5.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
                         <div class="tag-sale">ON SALE</div>
-                        <img src="./img/product/6.jpg" alt="">
+                        <img src="./img/product/14.jpg" alt="">
                         <div class="pi-links">
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
+                        <h6>$25</h6>
+                        <p>Áo Khoác Hoodie Ver63</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
-                        <img src="./img/product/7.jpg" alt="">
+                        <img src="./img/product/36.jpg" alt="">
                         <div class="pi-links">
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
+                        <h6>$25</h6>
+                        <p>Quần Jean Slimfit Đơn Giản B36 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/42.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="pi-text">
+                        <h6>$25</h6>
+                        <p>Quần Jean Slimfit Đơn Giản B43</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
-                        <img src="./img/product/8.jpg" alt="">
+                        <img src="./img/product/31.jpg" alt="">
                         <div class="pi-links">
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
+                        <h6>$22</h6>
+                        <p>Quần Jogger Nguyên Bản Ver18 </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
-                        <img src="./img/product/9.jpg" alt="">
+                        <img src="./img/product/33.jpg" alt="">
                         <div class="pi-links">
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/10.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/11.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
+                        <h6>$22</h6>
+                        <p>Quần Dài Sweatpants  Ver3 </p>
                     </div>
                 </div>
             </div>
@@ -260,18 +231,49 @@
                 <div class="product-item">
                     <div class="pi-pic">
                         <!-- <img src="assets/img/product/12.jpg alt=""> -->
-                        <img src="./img/product/12.jpg" alt="">
+                        <img src="./img/product/43.jpg" alt="">
                         <div class="pi-links">
                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
+                        <h6>$25</h6>
+                        <p>Quần Jean Lưng Vải Cotton Gu Đơn Giản B35 </p>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/61.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="pi-text">
+                        <h6>$12</h6>
+                        <p>Dép Nguyên Bản D1 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/60.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="pi-text">
+                        <h6>$25</h6>
+                        <p>Dép Đế Thấp Phụ Kiện Nguyên Bản C3 </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="text-center pt-5">
             <button class="site-btn sb-line sb-dark">LOAD MORE</button>
@@ -284,10 +286,10 @@
 <!-- Banner section -->
 <section class="banner-section">
     <div class="container">
-        <div class="banner set-bg" data-setbg="img/banner2.jpg" >
+        <div class="banner set-bg" data-setbg="img/banner2.jpg" style="height:250px" >
             <div class="tag-new">NEW</div>
-            <!-- <span>New Arrivals</span>
-            <h2>STRIPED SHIRTS</h2> -->
+            <!-- <span>New Arrivals</span> -->
+            <span>KING OF FASHION</span>
             <a href="#" class="site-btn">SHOP NOW</a>
         </div>
     </div>
