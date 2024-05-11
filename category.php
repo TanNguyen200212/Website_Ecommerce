@@ -45,11 +45,15 @@
                                     <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
                                             CART</span></a>
                                     <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                    <?php echo $row['p_id'] ?>
+                                
+
+
                                 </div>
                             </div>
                             <div class="pi-text">
+                            
                                 <h6>$<?php echo $row['price'] ?></h6>
+                                <p><?php echo $row['product_name'] ?></p>
 
                             </div>
                         </div>
@@ -68,14 +72,14 @@
     
 
     <!-- phantrang -->
-	<!-- <div class="container mt-3">          
+	<div class="product__pagination">          
 	<ul class="pagination justify-content-center">
 		<li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>
 		<li class="page-item"><a class="page-link" href="#">1</a></li>
 		<li class="page-item"><a class="page-link" href="#">2</a></li>
 		<li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>
 	</ul>
-	</div> -->
+	</div>
 
 </section>
 <!-- Category section end -->

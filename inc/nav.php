@@ -24,11 +24,23 @@
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-5">
-                    <form class="header-search-form">
-                        <input type="text" placeholder="Search on divisima ....">
-                        <button><i class="flaticon-search"></i></button>
+                    <form class="header-search-form" action="search.php" method="get">
+                        <input type="text" placeholder="Search on yami ...." name="keyword">
+                        <button type="submit" name="btn" value="search"><i class="flaticon-search"></i></button>
                     </form>
                 </div>
+
+                <?php 
+                if(isset($_REQUEST['btn'])){
+                    $search = addslashes($_GET['search']);
+                    if(empty($search)){
+                        echo " ";
+                    }else{
+                        $query ="select * from where username like ";
+                    }
+                }
+                
+                ?>
                 <div class="col-xl-4 col-lg-5">
                     <div class="user-panel">
                         <div class="up-item">

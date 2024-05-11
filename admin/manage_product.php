@@ -57,7 +57,7 @@
                                     <td class="text-center">
                                     <?php 
                                     if($row['status'] =='1'){
-                                        echo "<a href ='manage_product.php?opr=deactive&id=".$row['p_id']."' class='btn btn-success'> Deactive</a>";
+                                        echo "<a href ='manage_product.php?opr=deactive&id=".$row['p_id']."' class='btn btn-danger'> Deactive</a>";
                                     }else{
                                         echo "<a href ='manage_product.php?opr=active&id=".$row['p_id']."' class='btn btn-success'> Active</a>";
                                     }

@@ -44,7 +44,7 @@
 
             <!-- <a href="product.php" class="nav-item nav-link"><i class="fa fa-solid fa-bars"></i> Product</a> -->
             <a href="order_master.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Order Master</a>
-            <a href="user_list.php" class="nav-item nav-link"><i class="fa fa-solid fa-list"></i> User List</a>
+            <a href="account.php" class="nav-item nav-link"><i class="fa fa-solid fa-key"></i> Account</a>
 
             <a href="basic_ui.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Basic UI</a>
             <div class="nav-item dropdown">

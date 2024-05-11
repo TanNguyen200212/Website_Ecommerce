@@ -142,6 +142,33 @@ function active_status()
 
 }
 
+function active_status_user()
+{
+    global $con;
+    if(isset($_GET['opr']) && $_GET['opr']!="")
+    {
+        $operation = safe_value($con,$_GET['opr']);
+        $id = safe_value($con,$_GET['id']);
+
+        if($operation=='active')
+        {
+            $status = 1;
+        }else{
+            $status = 0;
+        }
+
+        $query = "UPDATE user_register SET status='$status' WHERE id='$id'";
+        $result = mysqli_query($con,$query);
+
+        if($result){
+            header("location:account.php");
+            set_message(display_success("user has been updated"));
+        }
+
+    }
+
+}
+
 
 
 
@@ -454,5 +481,11 @@ function contact()
     return $query = mysqli_query($con, $sql);
 }
 
+//view user
 
+function view_user(){
+    global $con;
+    $sql ="select * from user_register ";
+    return mysqli_query($con,$sql);
+}
 ?>

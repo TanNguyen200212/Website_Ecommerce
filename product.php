@@ -67,6 +67,28 @@ $result = mysqli_fetch_assoc($products);
 					<div class="p-review">
 						<a href="">3 reviews</a>|<a href="">Add your review</a>
 					</div>
+					<div class="filter-widget mb-0">
+						<h4 class="fw-title">Size</h4>
+						<div class="fw-size-choose">
+							<div class="sc-item">
+								<input type="radio" name="sc" id="s-size">
+								<label for="s-size">S</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="m-size"  checked="">
+								<label for="m-size">M</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="l-size">
+								<label for="l-size">L</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="xl-size">
+								<label for="xl-size">XL</label>
+							</div>
+						</div>
+					</div>
+
 					<div class="quantity">
 						<p>Quantity</p>
                         <div class="pro-qty">
