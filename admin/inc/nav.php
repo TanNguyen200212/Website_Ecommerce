@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="ms-3">
-                <h6 class="mb-0">YUMI</h6>
-                <span>Admin</span>
+                <h6 class="mb-0">ADMIN</h6>
+                <!-- <span>Admin</span> -->
             </div>
         </div>
         <div class="navbar-nav w-100">
