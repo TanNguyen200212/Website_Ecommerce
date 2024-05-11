@@ -48,7 +48,6 @@
                                     ?>
                                 
                                     <a href="edit_cat.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm ">Edit</a>
-                                    <a href="del_cat.php?id=<?php echo $row['id']?>" class="btn btn-danger">Delete</a>
                                     
                                     </td>
                             
@@ -71,3 +70,5 @@
                 </div>
             </div>
             <!-- Recent Sales End -->
+            <!-- footer -->
+<?php require_once 'inc/footer.php'; ?>

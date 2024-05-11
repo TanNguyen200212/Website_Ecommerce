@@ -20,7 +20,7 @@
             <a href="dashboard.php" class="nav-item nav-link active"><i
                     class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="fa fa-laptop me-2"></i>Category</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="add_category.php" class="dropdown-item">Add Category</a>
@@ -29,7 +29,7 @@
             </div>
             <!-- fa fa-table me-2 -->
             <div class="nav-item dropdown">
-                <a href="product.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="fa fa-cart-arrow-down"></i>Product</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="add_product.php" class="dropdown-item">Add Product</a>
@@ -145,8 +145,6 @@
                     <span class="d-none d-lg-inline-flex">Admin</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                    <a href="#" class="dropdown-item">My Profile</a>
-                    <a href="#" class="dropdown-item">Settings</a>
                     <a href="./logout.php" class="dropdown-item">Log Out</a>
                 </div>
             </div>

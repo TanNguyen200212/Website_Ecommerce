@@ -69,3 +69,5 @@
                 </div>
             </div>
             <!-- Recent Sales End -->
+            <!-- footer -->
+<?php require_once 'inc/footer.php'; ?>
