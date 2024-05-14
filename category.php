@@ -31,14 +31,11 @@ include './functions/db.php';
 $item_per_page = 6;
 $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
 $offset = ($current_page - 1) * $item_per_page;
-echo "Offset: " . $offset;
-echo "Page: " .$current_page;
-echo "Item per page: ". $item_per_page;
-// $products =mysqli_query($con,"SELECT * FROM products ORDER BY p_id ASC LIMIT " . $item_per_page ."OFFSET 4");
+// echo "Offset: " . $offset;
+// echo "Page: " .$current_page;
+// echo "Item per page: ". $item_per_page;
 $products = mysqli_query($con, "SELECT * FROM `products` WHERE category_name = '$cat_id'  ORDER BY p_id ASC LIMIT " . $item_per_page . " OFFSET " . $offset);
 
-// $startFrom = ($page-1) * $perPage;  
-// $sqlQuery = "SELECT * FROM products ORDER BY p_id ASC LIMIT $startFrom, $perPage";  
 $totalRecords = mysqli_query($con, "SELECT *from `products`");
 $totalRecords = $totalRecords->num_rows;
 $totalPages = ceil($totalRecords / $item_per_page);
