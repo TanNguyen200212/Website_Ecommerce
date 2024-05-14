@@ -69,7 +69,13 @@ if(isset($_GET['id']) && $_GET['id']!="")
 
 
 
+<<<<<<< HEAD
     <?php 
 //  require_once 'inc/footer.php';
 ?>
     <?php require_once 'inc/footer.php'; ?>
+=======
+<?php 
+ require_once 'inc/footer.php';
+?> 
+>>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2

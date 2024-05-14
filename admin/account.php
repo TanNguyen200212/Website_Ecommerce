@@ -60,6 +60,7 @@
                     <?php
                                 } 
                                 ?>
+<<<<<<< HEAD
 
                 </thead>
                 <tbody>
@@ -70,4 +71,17 @@
     </div>
 </div>
 <!-- Recent Sales End -->
+=======
+                            
+                            </thead>
+                            <tbody>
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Sales End -->
+            <!-- footer -->
+>>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2
 <?php require_once 'inc/footer.php'; ?>

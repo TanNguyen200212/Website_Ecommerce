@@ -47,6 +47,7 @@
                                         echo "<a href ='manage_category.php?opr=active&id=".$row['id']."' class='btn btn-success'> Active</a>";
                                     }
                                     ?>
+<<<<<<< HEAD
 
                             <a href="edit_cat.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm ">Edit</a>
                             <a href="del_cat.php?id=<?php echo $row['id']?>" class="btn btn-danger">Delete</a>
@@ -55,6 +56,15 @@
 
                     </tr>
                     <?php
+=======
+                                
+                                    <a href="edit_cat.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm ">Edit</a>
+                                    
+                                    </td>
+                            
+                                </tr>
+                                <?php
+>>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2
                                 } 
                                 ?>
 
@@ -66,10 +76,20 @@
                                     <td>Jhon Doe</td>
                                     <td>$123</td>
                                 </tr> -->
+<<<<<<< HEAD
                 </tbody>
             </table>
         </div>
     </div>
 </div>
 <!-- Recent Sales End -->
+=======
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Sales End -->
+            <!-- footer -->
+>>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2
 <?php require_once 'inc/footer.php'; ?>

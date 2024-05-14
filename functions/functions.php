@@ -37,6 +37,10 @@ function get_products($cat_id='', $product_id='')  //,$vmin=0,$vmax=999
 }
 
 
+
+
+
+
 //display cat links 
 function display_cat_links($category_id="")
 {

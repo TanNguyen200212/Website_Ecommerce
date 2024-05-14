@@ -64,6 +64,7 @@
                                         echo "<a href ='manage_product.php?opr=active&id=".$row['p_id']."' class='btn btn-success'> Active</a>";
                                     }
                                     ?>
+<<<<<<< HEAD
 
                             <a href="edit_product.php?id=<?php echo $row['p_id']?>"
                                 class="btn btn-primary btn-sm ">Edit</a>
@@ -76,6 +77,37 @@
                     <?php
                                 } 
                                 ?>
+=======
+                                
+                                    <a href="edit_product.php?id=<?php echo $row['p_id']?>" class="btn btn-primary btn-sm ">Edit</a>
+                                    
+                                    </td>
+                                
+                            
+                                </tr>
+                                <?php
+                                } 
+                                ?>
+                            
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Sales End -->
+            <!-- footer -->
+<?php require_once 'inc/footer.php'; ?>
+
+
+
+
+
+
+
+>>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2
 
                 </thead>
                 <tbody>

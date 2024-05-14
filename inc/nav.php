@@ -31,14 +31,14 @@
                 </div>
 
                 <?php 
-                if(isset($_REQUEST['btn'])){
-                    $search = addslashes($_GET['search']);
-                    if(empty($search)){
-                        echo " ";
-                    }else{
-                        $query ="select * from where username like ";
-                    }
-                }
+                // if(isset($_REQUEST['btn'])){
+                //     $search = addslashes($_GET['search']);
+                //     if(empty($search)){
+                //         echo " ";
+                //     }else{
+                //         $query ="select * from where username like ";
+                //     }
+                // }
                 
                 ?>
                 <div class="col-xl-4 col-lg-5">
