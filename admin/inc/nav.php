@@ -29,7 +29,7 @@
             </div>
             <!-- fa fa-table me-2 -->
             <div class="nav-item dropdown">
-                <a href="product.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="fa fa-cart-arrow-down"></i>Product</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="add_product.php" class="dropdown-item">Add Product</a>
@@ -42,7 +42,6 @@
             </div>
 
 
-            <!-- <a href="product.php" class="nav-item nav-link"><i class="fa fa-solid fa-bars"></i> Product</a> -->
             <a href="order_master.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Order Master</a>
             <a href="account.php" class="nav-item nav-link"><i class="fa fa-solid fa-key"></i> Account</a>
 

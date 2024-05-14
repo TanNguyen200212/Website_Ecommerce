@@ -15,10 +15,12 @@ require_once '../functions/functions.php';
         }
         else{
             $hash = password_hash($password,PASSWORD_DEFAULT);
-            $query ="INSERT INTO user_register(name,email,password) values ('$name','$email','$password')";
+            $query ="INSERT INTO user_register(name,email,password) values ('$name','$email','$hash')";
             $result = mysqli_query($con,$query);
             if($result){
-                echo "you have successfully Register :) <a href ='./login.php'>Login</a>";
+                //echo "you have successfully Register :) <a href ='./login.php'>Login</a>";
+                
             }
+            header('Location: ../login.php');
         }
     }

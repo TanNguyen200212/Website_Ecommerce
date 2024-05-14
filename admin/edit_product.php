@@ -32,7 +32,8 @@ while($row=mysqli_fetch_assoc($edit_product))
                 </div>
             </div>
             <div class="ibox-body">
-                <form class="form-horizontal" id="form-sample-1" method="post" novalidate="novalidate" enctype="multipart/form-data">
+                <form class="form-horizontal" id="form-sample-1" method="post" novalidate="novalidate"
+                    enctype="multipart/form-data">
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Edit Product</label>
                         <?php
@@ -50,13 +51,14 @@ while($row=mysqli_fetch_assoc($edit_product))
                                     if($category_id==$row['id'])
                                     {
                                     ?>
-                                    <option selected value="<?php echo $row['id'] ?>"><?php echo $row['cat_name'] ?></option>
-                                    <?php
+                                <option selected value="<?php echo $row['id'] ?>"><?php echo $row['cat_name'] ?>
+                                </option>
+                                <?php
                                     }
                                     else
                                     {
                                         ?>
-                                        <option value="<?php echo $row['id'] ?>"><?php echo $row['cat_name'] ?></option>
+                                <option value="<?php echo $row['id'] ?>"><?php echo $row['cat_name'] ?></option>
                                 <?php
                                     }
                                 }
@@ -66,26 +68,31 @@ while($row=mysqli_fetch_assoc($edit_product))
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="hidden" name="product_id" placeholder="Product_id" value="<?php echo $product_id ?>">
-                            <input class="form-control" type="text" name="product_name" placeholder="Product_name" value="<?php echo $product_name ?>">
+                            <input class="form-control" type="hidden" name="product_id" placeholder="Product_id"
+                                value="<?php echo $product_id ?>">
+                            <input class="form-control" type="text" name="product_name" placeholder="Product_name"
+                                value="<?php echo $product_name ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="mrp" placeholder="MRP" value="<?php echo $mrp ?>">
+                            <input class="form-control" type="text" name="mrp" placeholder="MRP"
+                                value="<?php echo $mrp ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="price" placeholder="Price" value="<?php echo $price ?>">
+                            <input class="form-control" type="text" name="price" placeholder="Price"
+                                value="<?php echo $price ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="qty" placeholder="Quantity" value="<?php echo $qty ?>">
+                            <input class="form-control" type="text" name="qty" placeholder="Quantity"
+                                value="<?php echo $qty ?>">
                         </div>
                     </div>
 
@@ -98,7 +105,8 @@ while($row=mysqli_fetch_assoc($edit_product))
 
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <textarea id="" name="desc" cols="30" rows="10" class="form-control" placeholder="D" required><?php echo $description ?></textarea>
+                            <textarea id="" name="desc" cols="30" rows="10" class="form-control" placeholder="D"
+                                required><?php echo $description ?></textarea>
                         </div>
                     </div>
             </div>
@@ -115,4 +123,4 @@ while($row=mysqli_fetch_assoc($edit_product))
             </div>
         </div>
     </div>
-
+    <?php require_once 'inc/footer.php'; ?>

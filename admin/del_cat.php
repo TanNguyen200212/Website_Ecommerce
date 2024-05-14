@@ -10,3 +10,4 @@ if(isset($_GET['id'])){
     }
 }
 ?>
+<?php require_once 'inc/footer.php'; ?>

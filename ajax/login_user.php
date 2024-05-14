@@ -13,25 +13,26 @@ require_once '../functions/functions.php';
 
         if($row= mysqli_fetch_assoc($result))
         {
-            //$desh= password_verify($password,$row['password']);
-            $desh = $password === $row["password"];
+             
+             $desh= password_verify($password,$row['password']);
             
             if($desh==false){
                 echo "invalid";
                 echo "$email";
-                echo "$password";
+                echo password_hash($password,PASSWORD_DEFAULT);
                 echo $row['password'];
-                echo $desh;
+                echo "is equal or not: ". $desh;
             } 
             if($desh==true){
                 // echo "password matched";
                 echo "valid";
                 $_SESSION['EMAIL_USER_LOGIN']= $row['email'];
-                header('Location: ../index.php');
                 $_SESSION['LOGGED_IN'] = true;
+                header('Location: ../index.php');
+                
             }
         }
         else{
-        
+            echo "Cannot fetch result";
         }
     }
