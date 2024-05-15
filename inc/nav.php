@@ -1,8 +1,8 @@
-<?php 
-	session_start();
-	require_once 'functions/functions.php';
-	$cat =display_cat();
-	$cart_value = total_cart_value();
+<?php
+session_start();
+require_once 'functions/functions.php';
+$cat = display_cat();
+$cart_value = total_cart_value();
 
 ?>
 
@@ -23,6 +23,8 @@
                         <img src="./img/logo6.png" alt="">
                     </a>
                 </div>
+
+                <!-- search -->
                 <div class="col-xl-6 col-lg-5">
                     <form class="header-search-form" action="search.php" method="get">
                         <input type="text" placeholder="Search on yami ...." name="keyword">
@@ -30,36 +32,24 @@
                     </form>
                 </div>
 
-                <?php 
-                // if(isset($_REQUEST['btn'])){
-                //     $search = addslashes($_GET['search']);
-                //     if(empty($search)){
-                //         echo " ";
-                //     }else{
-                //         $query ="select * from where username like ";
-                //     }
-                // }
-                
-                ?>
+
+
                 <div class="col-xl-4 col-lg-5">
                     <div class="user-panel">
                         <div class="up-item">
                             <i class="flaticon-profile"></i>
                             <?php
-									if(isset($_SESSION['EMAIL_USER_LOGIN']))
-									{
-									?>
-                            <a href="ajax/logout.php">Logout</a>
+                            if (isset($_SESSION['EMAIL_USER_LOGIN'])) {
+                            ?>
+                                <a href="ajax/logout.php">Logout</a>
                             <?php
-									}
-									else
-										{
-											?>
-                            <a href="login.php">Sign In </a> or <a href="register.php">Create Account</a>
+                            } else {
+                            ?>
+                                <a href="login.php">Sign In </a> or <a href="register.php">Create Account</a>
                             <?php
-										}
+                            }
 
-									?>
+                            ?>
 
 
                         </div>
@@ -80,14 +70,13 @@
             <!-- menu -->
             <ul class="main-menu">
                 <li><a href="index.php">HOME</a></li>
-                <?php 
-				while($row = mysqli_fetch_assoc($cat))
-				{
-					?>
-                <li><a href="category.php?id=<?php echo $row['id'] ?>"><?php echo  $row ['cat_name']?></a></li>
-                <?php 
-					}
-					?>
+                <?php
+                while ($row = mysqli_fetch_assoc($cat)) {
+                ?>
+                    <li><a href="category.php?id=<?php echo $row['id'] ?>"><?php echo  $row['cat_name'] ?></a></li>
+                <?php
+                }
+                ?>
                 <li><a href="./contact.php">CONTACT </a></li>
 
             </ul>

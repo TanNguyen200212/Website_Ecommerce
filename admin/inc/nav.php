@@ -29,11 +29,8 @@
             </div>
             <!-- fa fa-table me-2 -->
             <div class="nav-item dropdown">
-<<<<<<< HEAD
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
-=======
+
                 <a href="javascript:;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
->>>>>>> 8061c79ffd651c8bb09d11623ba5e69cba4c3cf2
                         class="fa fa-cart-arrow-down"></i>Product</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="add_product.php" class="dropdown-item">Add Product</a>

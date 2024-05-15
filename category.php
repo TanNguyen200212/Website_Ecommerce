@@ -34,6 +34,9 @@ $offset = ($current_page - 1) * $item_per_page;
 // echo "Offset: " . $offset;
 // echo "Page: " .$current_page;
 // echo "Item per page: ". $item_per_page;
+$value= $_GET['id'];
+        $page = "/Github/WEB2_Ecommerce/category.php?";
+        $key="id";
 $products = mysqli_query($con, "SELECT * FROM `products` WHERE category_name = '$cat_id'  ORDER BY p_id ASC LIMIT " . $item_per_page . " OFFSET " . $offset);
 
 $totalRecords = mysqli_query($con, "SELECT *from `products`");
