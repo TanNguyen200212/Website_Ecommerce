@@ -50,7 +50,7 @@ $result = mysqli_fetch_assoc($products);
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
-					<h2 class="p-title"><?php echo $result['product_name']?></h2>
+					<h2 class="p-title" ><?php echo $result['product_name']?></h2>
 					<!-- <h3 class="p-price">$39.90</h3> -->
 					<h4><span>MRP : </span><del style="color: #ff0000;">$<?php echo $result['MRP']?></del></h4>
 					<h4><span>Price : </span>$<?php echo $result['price']?></h4>
@@ -67,36 +67,18 @@ $result = mysqli_fetch_assoc($products);
 					<div class="p-review">
 						<a href="">3 reviews</a>|<a href="">Add your review</a>
 					</div>
-					<div class="filter-widget mb-0">
-						<h4 class="fw-title">Size</h4>
-						<div class="fw-size-choose">
-							<div class="sc-item">
-								<input type="radio" name="sc" id="s-size">
-								<label for="s-size">S</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="m-size"  checked="">
-								<label for="m-size">M</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="l-size">
-								<label for="l-size">L</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="xl-size">
-								<label for="xl-size">XL</label>
-							</div>
-						</div>
-					</div>
 
 					<div class="quantity">
 						<p>Quantity</p>
                         <div class="pro-qty">
-							<form action="car" method="post ">
+							<form action="cart.php" method="post ">
 						<input type="text" value="1" id="qty" value="<?php echo $result['qty']?>">
-						</div>
 					</div>
-							<button type="button" id="p_id" value ="<?php echo $result['p_id']?>" class="site-btn"> Add to Cart</button>
+					</div>
+					<input type="hidden" id="p_name" value="<?php echo $result['product_name']?>">
+					<input type="hidden" id="p_id" value ="<?php echo $result['p_id']?>">
+					<input type= "hidden" id="price" value ="<?php echo $result['price']?>">
+							<button type="button"  class="site-btn"> Add to Cart</button>
 					</form>
 
 					
@@ -148,6 +130,5 @@ $result = mysqli_fetch_assoc($products);
 	<!-- RELATED PRODUCTS section -->
 
 	<!-- RELATED PRODUCTS section end -->
-
 
 <?php require_once 'inc/footer.php' ?>

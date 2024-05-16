@@ -3,9 +3,9 @@
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
-			<h4>Your cart</h4>
+			<!-- <h4>Checkout</h4> -->
 			<div class="site-pagination">
-				<a href="">Home</a> /
+				<a href="">Home/ </a>
 				<a href="">Your cart</a>
 			</div>
 		</div>

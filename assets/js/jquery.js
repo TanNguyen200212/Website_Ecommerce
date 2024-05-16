@@ -101,12 +101,15 @@ function add_cart(){
     $(document).on('click','.site-btn',function(){
     var qty = $('#qty').val();
     var pid =$('#p_id').val();
+    var pname =$('#p_name').val();
+    var price =$('#price').val();
 
+    console.log({Qty: qty, p_id: pid, p_name: pname,price:price, type: 'add'});
     $.ajax(     
         {
             url:'ajax/manage_cart.php',
             method:'post',
-            data:{Qty:qty,p_id:pid ,type:'add'},
+            data:{Qty:qty,p_id:pid,p_name:pname,price:price,type:'add'},
             success:function(data){
             {
                 $('#cart_counter').html(data);

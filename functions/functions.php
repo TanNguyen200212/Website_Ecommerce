@@ -59,8 +59,16 @@ function display_cat_links($category_id="")
 
 //add to cart fun
 
-function add_cart($pid,$qty){
+function add_cart($pid,$pname,$price,$qty){
+
+    if(!isset($_SESSION['CART'])) {
+        $_SESSION['CART']= [];
+    }
     $_SESSION['CART'][$pid]['QTY']=$qty;
+    $_SESSION['CART'][$pid]['NAME']=$pname;
+    $_SESSION['CART'][$pid]['PRICE']=$price;
+
+    
 }
 
 //total cart values
