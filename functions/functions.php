@@ -80,3 +80,9 @@ function total_cart_value(){
         return 0;
     }
 }
+
+function remove_from_cart($pid) {
+    if (isset($_SESSION['CART'][$pid])) {
+      unset($_SESSION['CART'][$pid]);
+    }
+  }

@@ -1,5 +1,14 @@
-<?php require_once 'inc/header.php' ?>
-<?php require_once 'inc/nav.php' ?>
+<?php require_once 'inc/header.php'; 
+require_once './functions/db.php';
+?>
+<?php require_once 'inc/nav.php' ;
+
+$cart = [];
+if (isset($_SESSION['CART'])) {
+    $cart = $_SESSION['CART'];
+}
+?>
+
 	<!-- Page info -->
 	<div class="page-top-info">
 		<div class="container">
@@ -50,7 +59,7 @@
 								<input type="text" placeholder="Phone no.">
 							</div>
 						</div>
-						<div class="cf-title">Delievery Info</div>
+						<!-- <div class="cf-title">Delievery Info</div>
 						<div class="row shipping-btns">
 							<div class="col-6">
 								<h4>Standard</h4>
@@ -74,7 +83,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="cf-title">Payment</div>
 						<ul class="payment-list">
 							<li>Paypal<a href="#"><img src="img/paypal.png" alt=""></a></li>
@@ -87,22 +96,27 @@
 				<div class="col-lg-4 order-1 order-lg-2">
 					<div class="checkout-cart">
 						<h3>Your Cart</h3>
+						<?php
+								$total = 0;
+								foreach ($_SESSION['CART'] as $pid => $item) :
+
+									$subtotal = $item['PRICE'] * $item['QTY'];
+									$total += $subtotal;
+								?>
 						<ul class="product-list">
 							<li>
-								<div class="pl-thumb"><img src="img/cart/1.jpg" alt=""></div>
-								<h6>Animal Print Dress</h6>
-								<p>$45.90</p>
+								
+								<h6><?php echo htmlspecialchars($item['NAME']); ?></h6>
+								<p>$<?php echo number_format($item['PRICE'], 2); ?></p>
 							</li>
-							<li>
-								<div class="pl-thumb"><img src="img/cart/2.jpg" alt=""></div>
-								<h6>Animal Print Dress</h6>
-								<p>$45.90</p>
-							</li>
+							
 						</ul>
+						<?php endforeach; ?>
 						<ul class="price-list">
-							<li>Total<span>$99.90</span></li>
-							<li>Shipping<span>free</span></li>
-							<li class="total">Total<span>$99.90</span></li>
+						
+						<li>Total<span>$<?php echo number_format($total,2);?></span></li>
+						<li>Shipping<span>free</span></li>
+						<li class="total">Total<span>$<?php echo number_format($total,2);?></span></li>
 						</ul>
 					</div>
 				</div>
@@ -112,18 +126,3 @@
 	<!-- checkout section end -->
 
 	<?php require_once 'inc/footer.php' ?>
-
-
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.slicknav.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.nicescroll.min.js"></script>
-	<script src="assets/js/jquery.zoom.min.js"></script>
-	<script src="assets/js/jquery-ui.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	</body>
-</html>

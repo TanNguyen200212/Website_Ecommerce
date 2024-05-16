@@ -14,16 +14,16 @@ require_once '../functions/functions.php';
         if($row= mysqli_fetch_assoc($result))
         {
              
-             $desh= password_verify($password,$row['password']);
-            
+             $desh= $password===$row['password'];
+            $status = $row['status'];
             if($desh==false){
                 echo "invalid";
                 echo "$email";
-                echo password_hash($password,PASSWORD_DEFAULT);
+                // echo password_hash($password,PASSWORD_DEFAULT);
                 echo $row['password'];
                 echo "is equal or not: ". $desh;
             } 
-            if($desh==true){
+            if($desh==true && $status==1){
                 // echo "password matched";
                 echo "valid";
                 $_SESSION['EMAIL_USER_LOGIN']= $row['email'];
