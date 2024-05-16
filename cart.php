@@ -1,6 +1,3 @@
-
-
-
 <?php
 session_start();
 if (!isset($_SESSION['EMAIL_USER_LOGIN'])) {
@@ -21,12 +18,11 @@ require_once 'inc/header.php' ?>
 		<div class="site-pagination">
 			<a href="index.php">Home</a> /
 			<a href="cart.php">Your cart</a>
-			<a href='./del_cart.php' class="btn btn-danger">Delete</a>
+
 		</div>
 	</div>
 </div>
 <!-- Page info end -->
-
 
 <!-- cart section end -->
 <section class="cart-section spad">
@@ -36,7 +32,7 @@ require_once 'inc/header.php' ?>
 				<div class="cart-table">
 					<h3>Your Cart</h3>
 					<div class="cart-table-warp">
-						
+
 						<?php if (isset($_SESSION['CART']) && count($_SESSION['CART']) > 0) : ?>
 							<table>
 								<thead>
@@ -45,6 +41,8 @@ require_once 'inc/header.php' ?>
 										<th class="quy-th">Quantity</th>
 										<th class="total-th">Price</th>
 										<th class="total-th">SubTotal</th>
+										<th class="total-th">Opeartions</th>
+
 									</tr>
 								</thead>
 								<?php
@@ -59,12 +57,11 @@ require_once 'inc/header.php' ?>
 										<td><?php echo htmlspecialchars($item['QTY']); ?></td>
 										<td>$<?php echo number_format($item['PRICE'], 2); ?></td>
 										<td>$<?php echo number_format($subtotal, 2); ?> </td>
-
-										<?php
-										// require __DIR__. '/functions/functions.php';
-										// remove_from_cart($item['pid']);
-										?>
-										<!-- <button class="btn btn-del" onclick="" >Delete</button></td> -->
+										<td>
+											<button class="btn btn-warning">Update</button>
+											<a href='./del_cart1.php' class="btn btn-danger">Delete</a>
+										</td>
+										<!-- </td> -->
 
 
 
@@ -72,7 +69,7 @@ require_once 'inc/header.php' ?>
 									</tr>
 								<?php endforeach; ?>
 								<tr>
-									<td colspan="3">Tổng cộng</td>
+									<td colspan="3">Total </td>
 									<td>$<?php echo number_format($total, 2); ?></td>
 								</tr>
 							</table>
@@ -86,10 +83,11 @@ require_once 'inc/header.php' ?>
 				</div>
 			</div>
 			<div class="col-lg-4 card-right">
-				<!-- <form class="promo-code-form">
-							<input type="text" placeholder="Enter promo code">
-							<button>Submit</button>
-						</form> -->
+				<form class="promo-code-form">
+					<a href='./del_cart.php' class="site-btn btn btn-danger">Delete</a>
+
+				</form>
+
 				<a href="checkout.php" class="site-btn">Proceed to checkout</a>
 				<!-- <center><button class="codepro-custom-btn codepro-btn-6" target="blank" title="Code Pro" onclick="window.open('checkout.php')"><span>Proceed to checkout </span></button></center> -->
 				<a href="index.php" class="site-btn sb-dark">Continue shopping</a>
