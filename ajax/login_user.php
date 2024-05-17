@@ -28,6 +28,7 @@ require_once '../functions/functions.php';
                 echo "valid";
                 $_SESSION['EMAIL_USER_LOGIN']= $row['email'];
                 $_SESSION['LOGGED_IN'] = true;
+                $_SESSION['USER_ID'] = $row['id'];
                 header('Location: ../index.php');
                 
             }

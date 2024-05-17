@@ -37,11 +37,11 @@ require_once 'inc/header.php' ?>
 							<table>
 								<thead>
 									<tr>
-										<th class="product-th">Product</th>
-										<th class="quy-th">Quantity</th>
-										<th class="total-th">Price</th>
-										<th class="total-th">SubTotal</th>
-										<th class="total-th">Opeartions</th>
+										<th class="product-th" style="font-weight: 800;">Product</th>
+										<th class="quy-th" style="font-weight: 800;">Quantity</th>
+										<th class="total-th" style="font-weight: 800;">Price</th>
+										<th class="total-th" style="font-weight: 800;">SubTotal</th>
+										<th class="total-th" style="font-weight: 800;">Opeartions</th>
 
 									</tr>
 								</thead>
@@ -54,11 +54,20 @@ require_once 'inc/header.php' ?>
 								?>
 									<tr>
 										<td><?php echo htmlspecialchars($item['NAME']); ?></td>
+										<!-- <td class="quy-col">
+											<div class="quantity">
+												<div class="pro-qty">
+												<input type="text" value="	
+												</div>
+											</div>
+											
+										</td> -->
 										<td><?php echo htmlspecialchars($item['QTY']); ?></td>
 										<td>$<?php echo number_format($item['PRICE'], 2); ?></td>
 										<td>$<?php echo number_format($subtotal, 2); ?> </td>
 										<td>
-											<button class="btn btn-warning">Update</button>
+											<!-- <button class="btn btn-warning">Update</button> -->
+											<a href='./update_cart.php' class="btn btn-warning">Update</a>
 											<a href='./del_cart1.php' class="btn btn-danger">Delete</a>
 										</td>
 										<!-- </td> -->
@@ -69,7 +78,7 @@ require_once 'inc/header.php' ?>
 									</tr>
 								<?php endforeach; ?>
 								<tr>
-									<td colspan="3">Total </td>
+									<td colspan="3" style="font-weight: 800;">Total </td>
 									<td>$<?php echo number_format($total, 2); ?></td>
 								</tr>
 							</table>
@@ -89,6 +98,7 @@ require_once 'inc/header.php' ?>
 				</form>
 
 				<a href="checkout.php" class="site-btn">Proceed to checkout</a>
+			
 				<!-- <center><button class="codepro-custom-btn codepro-btn-6" target="blank" title="Code Pro" onclick="window.open('checkout.php')"><span>Proceed to checkout </span></button></center> -->
 				<a href="index.php" class="site-btn sb-dark">Continue shopping</a>
 			</div>

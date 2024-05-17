@@ -119,3 +119,15 @@ function add_cart(){
     })
 })
 }
+
+function create_order(){
+    $(document).on('click','.submit-order-btn',function(){
+ 
+    $.ajax(     
+        {
+            url:'ajax/create_order.php',
+            method:'post' ,
+            data:{}
+	})
+})
+}

@@ -1,38 +1,24 @@
 <?php 
-if (isset($_POST['submit'])) {
-	if (!empty($_SESSION['cart'])) {
-		foreach ($_POST['quantity'] as $key => $val) {
-			if ($val == 0) {
-				unset($_SESSION['cart'][$key]);
-			} else {
-				$_SESSION['cart'][$key]['quantity'] = $val;
-			}
-		}
-		echo "<script>alert('Your Cart has been Updated');</script>";
-	}
-	// update
+session_start();
+$idsp = $_GET['pid'];
+$new_quantity = $_GET['quantity'];
+if (!is_numeric($new_quantity) || $new_quantity <= 0) {
+    header("Location: cart.php?error=invalid_quantity");
+    exit();
 }
 
-if (isset($_POST['ordersubmit'])) {
-
-	if (strlen($_SESSION['login']) == 0) {
-		header('location:login.php');
-	} else {
-
-		$quantity = $_POST['quantity'];
-		$pdd = $_SESSION['pid'];
-		$value = array_combine($pdd, $quantity);
-
-
-		foreach ($value as $qty => $val34) {
-
-
-
-			mysqli_query($con, "insert into orders(userId,productId,quantity) values('" . $_SESSION['id'] . "','$qty','$val34')");
-			header('location:bill-ship-addresses2.php');
-		}
-	}
+if (isset($_SESSION['CART'])) {
+    $cart = $_SESSION['CART'];
+    for ($i = 0; $i < count($cart); $i++) {
+        if ($cart[$i]['pid'] == $idsp) {
+            // Update the quantity of the found product
+            $cart[$i]['quantity'] = $new_quantity;
+            break;
+        }
+    }
 }
+    $_SESSION['CART'] = $cart;
+    
 
 
 ?>
